@@ -1,6 +1,15 @@
-from typing import List
-
 def birthday(s, d, m):
+    count = 0
+    n = len(s)
+    
+    # Loop over each starting point
+    for start in range(n - m + 1):  # Ensure we have enough squares left for a full segment
+        end = start + m
+        if sum(s[start:end]) == d:  # Check if the sum of segment equals d
+            count += 1
+
+    return count
+    
     
 
 # Test function

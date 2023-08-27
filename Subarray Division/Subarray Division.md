@@ -50,3 +50,8 @@ def birthday(s: List[int], d: int, m: int) -> int:
 - \(1 \leq d \leq 31\)
 - \(1 \leq m \leq 12\)
 
+## Solution
+
+This is what is called a window problem where the window size is determined by Ron's birth month m.
+
+You'll traverse through the list of chocolate squares s and for each window of size m, you'll compute the sum and check if it matches Ron's birth day d.
