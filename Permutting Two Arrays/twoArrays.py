@@ -9,7 +9,19 @@
 #
 
 def twoArrays(k, A, B):
-    # Sort A in ascending order and B in descending order
+    '''
+    Given two arrays of integers A and B of length n, determine if there is a way to make A equal to B by
+    swapping any pair of elements from array A with a pair of elements from array B. Each swap operation
+    swaps the elements at the same index in array A and array B. If it is possible to make A equal to B,
+    return "YES", otherwise return "NO".
+    
+    Example:
+    A = [1, 2, 3, 4]
+    B = [1, 2, 3, 4]
+    k = 5
+    
+    The arrays are already equal, so no swaps are needed. Thus, we print "YES" on a new line.
+    '''
     A.sort()
     B.sort(reverse=True)
     

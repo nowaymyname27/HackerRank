@@ -1,6 +1,17 @@
 import string
 
 def pangrams(s):
+    '''
+    Given a string, returns whether or not it is a pangram.
+    A pangram is a string that contains every letter of the alphabet.
+    
+    >>> pangrams('We promptly judged antique ivory buckles for the next prize')
+    'pangram'
+    >>> pangrams('The quick brown fox jumps over the lazy dog')
+    'pangram'
+    >>> pangrams('Hello World')
+    'not pangram'
+    '''
     alphabet_list = list(string.ascii_lowercase)
     s = s.lower()
     for letter in s:

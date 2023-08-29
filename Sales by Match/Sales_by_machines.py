@@ -1,3 +1,5 @@
+
+def sockMerchant(n, ar):
     """
     There is a large pile of socks that must be paired by color.
     Given an array of integers representing the color of each sock,
@@ -11,7 +13,6 @@
     There are three odd socks left, one of each color.
     The number of pairs is 2.
     """
-def sockMerchant(n, ar):
     checker = []
     count = 0
     for num in ar:
