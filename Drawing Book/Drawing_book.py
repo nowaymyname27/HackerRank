@@ -10,6 +10,9 @@
 import math
 
 def pageCount(n, p):
+    '''
+    First iteration of this solution
+    '''
     book = []
     divisions = n / 2
     divisions = math.ceil(divisions)
@@ -19,6 +22,9 @@ def pageCount(n, p):
         if len(section) == 2:
             book.append(section)
             section = []
+    if section is not []:
+        section.append(0)
+        book.append(section)
     count_front = 0
     count_back = 0
     for turn_page in range(divisions):
@@ -34,6 +40,6 @@ def pageCount(n, p):
         return count_back
     
 def main():
-    print(pageCount(6, 4))
+    print(pageCount(6, 5))
 
 main()
