@@ -14,8 +14,6 @@ def pageCount(n, p):
     First iteration of this solution
     '''
     book = []
-    divisions = n / 2
-    divisions = math.ceil(divisions)
     section = []
     for page in range(n+1):
         section.append(page)
@@ -27,19 +25,28 @@ def pageCount(n, p):
         book.append(section)
     count_front = 0
     count_back = 0
-    for turn_page in range(divisions):
-        if p in book[turn_page]:
-            count_front = turn_page
+    for turns in range(len(book)):
+        if p in book[turns]:
+            count_front = turns
     book.sort(reverse=True)
-    for turn_page in range(divisions):
-        if p in book[turn_page]:
-            count_back = turn_page
-    if count_front < count_back:
-        return count_front
+    for turns in range(len(book)):
+        if p in book[turns]:
+            count_back = turns
+    return min(count_back, count_front)
+    
+def pageCount2(n, p):
+    # Someone else's solution
+    maxFlips = int(n / 2)
+    
+    if p == 1:
+        return 0
     else:
-        return count_back
+        leftToRight = int(p / 2)
+        rightToLeft = maxFlips - leftToRight
+        return min(leftToRight, rightToLeft)
     
 def main():
     print(pageCount(6, 5))
+    print(pageCount2(10, 10))
 
 main()
