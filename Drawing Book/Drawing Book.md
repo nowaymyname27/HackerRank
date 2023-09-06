@@ -2,7 +2,11 @@
 
 ## Problem Description
 
-A student has a book with `n` pages. The challenge is to find the minimum number of pages that need to be turned to get to a specific page `p`. A student can start turning pages from the beginning or the end of the book. Note that when they open the book, page 1 is always on the right side. Each subsequent page turn shows two pages (one on the left and one on the right) except possibly the last page if the total number of pages is odd.
+A student has a book with `n` pages. The challenge is to find the minimum number of pages that need to be turned to get to a specific page `p`. A student can start turning pages from the beginning or the end of the book. Note that when they open the book, page 1 is always on the right side.
+
+![Alt text](https://s3.amazonaws.com/hr-challenge-images/0/1481920803-d2b54f38f0-book.png)
+
+ Each subsequent page turn shows two pages (one on the left and one on the right) except possibly the last page.
 
 Given `n` (the number of pages) and `p` (the desired page), determine the minimum number of pages the student needs to turn.
 
@@ -14,6 +18,8 @@ Given `n` (the number of pages) and `p` (the desired page), determine the minimu
 n = 5
 p = 3
 ```
+
+![Alt text](https://s3.amazonaws.com/hr-challenge-images/22564/1467398281-32b69f6fa9-UntitledDiagram4.png)
 
 **Output:**
 
